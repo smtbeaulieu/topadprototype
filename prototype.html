@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            Prototype Stuff
+        </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <style>
+            body{
+                 background: #fafafa;
+                font-family: Averta;
+                margin: 0;
+            }
+            .timer{
+                width:150px;
+                height:20px;
+                color:#fff;
+                background-color:#000;
+                position: fixed;
+                z-index: 9999;
+                padding: 3px;
+            }
+            .wrapper{
+                width:100%;
+            }
+            .wrapperbkg{
+                display:none;
+            }
+            .header-background{
+                /* background-color:#333; */
+                padding: 0px;
+                color:#fff;
+                text-align: center;
+                height:300px;
+                overflow:hidden;
+                position:relative;
+                width:100%;
+                height:270px;
+                padding:10px;
+                text-align: center;
+                z-index: -1;
+                clip: rect(0, auto, auto, 0);
+
+            }
+            .header-parallax{
+                height:600px;
+                background: url(img/pillarbkg.png) top left repeat-x;
+                width:100%;
+            }
+            .header-content{
+                color:#fff;
+                position:fixed;
+                margin: 0 auto;
+                display: block;
+                width:100%;
+                text-align: center;
+            }
+            .header-content img{
+                margin: 0 auto;
+            }
+
+            .breaker{
+                background-color:#000;
+                overflow: hidden;
+                height:2px;
+            }
+            .container{
+                z-index:200;
+            }
+            .grid{
+                /* padding-top:200px; */
+            }
+            .row{
+                background-color:#fafafa;
+            }
+            nav{
+                z-index:500;
+            }
+
+            .navbar{
+                margin-bottom:0px;
+                border: 0;
+
+            }
+            
+            .navbar .container{
+                border-top:25px solid #000;
+                border-bottom:solid 1px #e0e0e0;
+                background-color: #fff;
+                /* border-bottom:1px #000 solid; */
+            }
+            
+            footer{
+                color:#fff;
+                background-color:#000;
+                height:300px;
+                margin:20px 0 0;
+            }
+            .pillar-left,.pillar-right{
+                display: none;
+            }
+            .mobile{
+                display:none;
+            }
+            .notmobile{
+                display:block;
+            }
+            @media screen and (max-width:1200px){
+                .mobile{
+                    display:block;
+                }
+                .notmobile{
+                    display:none;
+                }
+                .header-background{
+                    background-color:#000;
+                }
+            }
+
+            @media screen and (min-width:1200px){
+                body{
+                    background: #575174;
+                }
+                
+                .pillar-left,.pillar-right, .wrapperbkg{
+                    display: block;
+                }
+
+                 .wrapperbkg{
+                    background: url(img/bigtile.gif) top center repeat-x;
+                    width:100%;
+                    height:100%;
+                    position:absolute;
+                    top:0px;
+                    z-index: -2;
+                }
+
+                .pillar-left{
+                    position:fixed;
+                    /* background-color:#575174; */
+                    height:100vh;
+                    width:calc((100% - 1170px )/ 2);
+                    top:0px;
+                    left:0px;
+                    z-index:999;
+                    color:#fff;
+                    overflow: hidden;
+                    
+                }
+                .pillar-right{
+                    position:fixed;
+                    /* background-color:#575174; */
+                    width:calc((100% - 1170px )/ 2);
+                    height:100vh;
+                    right:0px;
+                    top:0px;
+
+                    z-index:999;
+                    color:#fff;
+                    overflow: hidden;
+
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="timer">
+            0 seconds
+        </div>
+        <div class="wrapper">
+            <div class="wrapperbkg rellax" data-rellax-speed="8"></div>
+            <div class="header-background">
+                <!-- <div class = "header-parallax rellax" data-rellax-speed="8">
+                </div> -->
+                <div class="header-content">
+                    <img src="img/dummyad.jpg" class="notmobile">
+                    <img src="img/mobilead.jpg" class="mobile">
+                </div>
+                <div class="logostuff">
+                    <!-- <h3 class="rellax" data-rellax-speed="0" data-rellax-zindex="2" data-rellax-percentage="0.5">Hey Look at me! I'm a H3. Put a logo inside me and we'll have fun!</h3> -->
+                </div>
+            </div>
+            <div class="pillar-left">
+                    <!-- <div class="rellax" data-rellax-speed="8">
+                            <img src="img/pillarbkg.png">
+
+                </div> -->
+            </div>
+            <div class="pillar-right">
+                    <!-- <div class="rellax" data-rellax-speed="8">
+                            <img src="img/pillarbkg.png">
+    
+                    </div> -->
+    
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="grid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Hello I'm A Pretend Nav Bar</h2>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                </nav>
+        <div class="grid  bg-light">
+            <div class="container">
+                   
+                <div class="row  bg-light">
+                    <div class="col-md-8">
+                        <h3>Here's some text</h3>
+                        <p>The Fifth Element (French: Le Cinquième Élément) is a 1997 French science-fiction action film directed and co-written by Luc Besson. It stars Bruce Willis, Gary Oldman and Milla Jovovich. Primarily set in the 23rd century, the film's central plot involves the survival of planet Earth, which becomes the responsibility of Korben Dallas (Willis), a taxicab driver and former special forces major, after a young woman (Jovovich) falls into his cab. Dallas joins forces with her to recover four mystical stones essential for the defence of Earth against an impending attack.</p>
+
+                        <p>Besson started writing the story that became The Fifth Element when he was 16 years old; he was 38 when the film opened in cinemas. Besson wanted to shoot the film in France, but suitable locations could not be found; filming took place instead in London and Mauritania. Comics writers Jean "Moebius" Giraud and Jean-Claude Mézières, whose comics provided inspiration for parts of the film, were hired for production design. Costume design was by Jean-Paul Gaultier.</p>
+
+                        <p>The Fifth Element received mainly positive reviews, although it tended to polarize critics. It has been called both the best and worst summer blockbuster of all time. The film was a financial success, earning more than $263 million at the box office on a $90 million budget. At the time of its release it was the most expensive European film ever made, and it remained the highest-grossing French film at the international box office until the release of The Intouchables in 2011.</p>
+                    </div>
+                    <div class="col-md-4">
+                            <h3>You want some more</h3>
+                            <p>Leeloo Dallas Multipass</p>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 breaker">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-8">
+                            <h3>Here's some more filler text</h3>
+                            <p>The Fifth Element (French: Le Cinquième Élément) is a 1997 French science-fiction action film directed and co-written by Luc Besson. It stars Bruce Willis, Gary Oldman and Milla Jovovich. Primarily set in the 23rd century, the film's central plot involves the survival of planet Earth, which becomes the responsibility of Korben Dallas (Willis), a taxicab driver and former special forces major, after a young woman (Jovovich) falls into his cab. Dallas joins forces with her to recover four mystical stones essential for the defence of Earth against an impending attack.</p>
+    
+                            <p>Besson started writing the story that became The Fifth Element when he was 16 years old; he was 38 when the film opened in cinemas. Besson wanted to shoot the film in France, but suitable locations could not be found; filming took place instead in London and Mauritania. Comics writers Jean "Moebius" Giraud and Jean-Claude Mézières, whose comics provided inspiration for parts of the film, were hired for production design. Costume design was by Jean-Paul Gaultier.</p>
+    
+                            <p>The Fifth Element received mainly positive reviews, although it tended to polarize critics. It has been called both the best and worst summer blockbuster of all time. The film was a financial success, earning more than $263 million at the box office on a $90 million budget. At the time of its release it was the most expensive European film ever made, and it remained the highest-grossing French film at the international box office until the release of The Intouchables in 2011.</p>
+                        </div>
+                        <div class="col-md-4">
+                                <h3>You want some more</h3>
+                                <p>Corbin Dallas Multipass</p>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12 breaker">
+                            
+
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-8">
+                                    <h3>Here's some more filler text</h3>
+                                    <p>The Fifth Element (French: Le Cinquième Élément) is a 1997 French science-fiction action film directed and co-written by Luc Besson. It stars Bruce Willis, Gary Oldman and Milla Jovovich. Primarily set in the 23rd century, the film's central plot involves the survival of planet Earth, which becomes the responsibility of Korben Dallas (Willis), a taxicab driver and former special forces major, after a young woman (Jovovich) falls into his cab. Dallas joins forces with her to recover four mystical stones essential for the defence of Earth against an impending attack.</p>
+            
+                                    <p>Besson started writing the story that became The Fifth Element when he was 16 years old; he was 38 when the film opened in cinemas. Besson wanted to shoot the film in France, but suitable locations could not be found; filming took place instead in London and Mauritania. Comics writers Jean "Moebius" Giraud and Jean-Claude Mézières, whose comics provided inspiration for parts of the film, were hired for production design. Costume design was by Jean-Paul Gaultier.</p>
+            
+                                    <p>The Fifth Element received mainly positive reviews, although it tended to polarize critics. It has been called both the best and worst summer blockbuster of all time. The film was a financial success, earning more than $263 million at the box office on a $90 million budget. At the time of its release it was the most expensive European film ever made, and it remained the highest-grossing French film at the international box office until the release of The Intouchables in 2011.</p>
+                                </div>
+                                <div class="col-md-4">
+                                        <h3>You want some more</h3>
+                                        <p>Corbin Dallas Multipass</p>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-8">
+                                        <h3>Here's some more filler text</h3>
+                                        <p>The Fifth Element (French: Le Cinquième Élément) is a 1997 French science-fiction action film directed and co-written by Luc Besson. It stars Bruce Willis, Gary Oldman and Milla Jovovich. Primarily set in the 23rd century, the film's central plot involves the survival of planet Earth, which becomes the responsibility of Korben Dallas (Willis), a taxicab driver and former special forces major, after a young woman (Jovovich) falls into his cab. Dallas joins forces with her to recover four mystical stones essential for the defence of Earth against an impending attack.</p>
+                
+                                        <p>Besson started writing the story that became The Fifth Element when he was 16 years old; he was 38 when the film opened in cinemas. Besson wanted to shoot the film in France, but suitable locations could not be found; filming took place instead in London and Mauritania. Comics writers Jean "Moebius" Giraud and Jean-Claude Mézières, whose comics provided inspiration for parts of the film, were hired for production design. Costume design was by Jean-Paul Gaultier.</p>
+                
+                                        <p>The Fifth Element received mainly positive reviews, although it tended to polarize critics. It has been called both the best and worst summer blockbuster of all time. The film was a financial success, earning more than $263 million at the box office on a $90 million budget. At the time of its release it was the most expensive European film ever made, and it remained the highest-grossing French film at the international box office until the release of The Intouchables in 2011.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                            <h3>You want some more</h3>
+                                            <p>Corbin Dallas Multipass</p>
+                                        </div>
+                                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="grid">
+                <div class="row">
+
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="rellax.min.js"></script>
+        <script type="text/javascript" src="stickykit.min.js"></script>
+        <script>
+                // Accepts any class name
+                let rellax = new Rellax('.rellax');
+                let fullpage = document.body.offsetHeight - window.innerHeight;
+                let ticking = false;
+
+                //I don't like binding the scroll for this, but we need it :()
+               
+                function goTransition(scrollPos){
+                    // console.log(scrollPos/fullpage);
+                    document.getElementsByClassName('wrapper')[0].style.backgroundColor = "rgba(250,250,250,"+ (scrollPos/fullpage) +")";
+
+                }
+                window.addEventListener('scroll', (event)=>{
+                    lastScroll=window.scrollY;
+                    if(!ticking){
+                        window.requestAnimationFrame(()=>{
+                            goTransition(lastScroll);
+                            ticking = false;
+                        });
+
+                        ticking = true; 
+                    }
+                    
+                });
+                
+                $('.navbar').stick_in_parent();
+                    let timerbox = document.getElementsByClassName("timer")[0];
+                    let timeVal = 1;
+                    let starterTimer = setInterval(function(){countUp();}, 1000);
+
+                    function countUp(){
+                        timerbox.innerHTML = timeVal + " seconds"; 
+                        timeVal++;
+                        if(timeVal > 2){
+                            timerbox.style.backgroundColor = "#009900";
+                        }
+                    };
+                    
+        </script>
+    </body>
+
+</html>
+
